@@ -1,0 +1,189 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f1f1f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #2a2a2a;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Button */
+.btn {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Home Section */
+.home-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #333;
+}
+
+.home-section h1 {
+    font-size: 3em;
+    color: #ff9900;
+}
+
+.home-section .subtitle {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+.home-section .description {
+    margin: 20px 0;
+}
+
+/* What I Do Section */
+.what-i-do {
+    padding: 50px;
+    background-color: #2f2f2f;
+    text-align: center;
+}
+
+.what-i-do h2 {
+    font-size: 2.5em;
+    color: #ff9900;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.service {
+    background-color: #444;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+.service h3 {
+    font-size: 1.5em;
+    color: #ff9900;
+}
+
+.service p {
+    color: #ddd;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 50px;
+    background-color: #2a2a2a;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5em;
+    color: #ff9900;
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.skill img {
+    width: 32px;
+    height: 32px;
+}
+
+.skill span {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a2a2a;
+    color: #ff9900;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%; /* Make services full width on mobile */
+    }
+
+    .home-section h1 {
+        font-size: 2.5em; /* Adjust font size for mobile */
+    }
+
+    .home-section .subtitle, .home-section .description {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+}
