@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/images/search?q=self%20management%20skills%20logo&FORM=IQFRBA&id=0F93782348CA0407FDA6504364AC3EB76CB141D8";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=a43d1bf17ff2e3b8JmltdHM9MTcyNjg3NjgwMCZpZ3VpZD0wNDg2NDBkMC05OTNhLTZkM2ItMzllYS01NDJiOTgzYzZjZWUmaW5zaWQ9NTUzOQ&ptn=3&ver=2&hsh=3&fclid=048640d0-993a-6d3b-39ea-542b983c6cee&u=a1L2ltYWdlcy9zZWFyY2g_cT1zZWxmJTIwbWFuYWdlbWVudCUyMHNraWxscyUyMGxvZ28mRk9STT1JUUZSQkEmaWQ9MEY5Mzc4MjM0OENBMDQwN0ZEQTY1MDQzNjRBQzNFQjc2Q0IxNDFEOA&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>
